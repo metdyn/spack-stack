@@ -41,7 +41,9 @@ class JediFv3MinEnv(BundlePackage):
     depends_on("hdf", when="+hdf4", type="run")
     depends_on("jedi-cmake", type="run")
     depends_on("netcdf-cxx4", type="run")
-#    depends_on("ncview", type="run")               # later
+    depends_on("ncview", type="run")
+    depends_on("nco", type="run")
+    depends_on("nccmp", type="run")
     depends_on("nlohmann-json", type="run")
     depends_on("nlohmann-json-schema-validator", type="run")
 #    depends_on("odc", type="run")
@@ -49,6 +51,10 @@ class JediFv3MinEnv(BundlePackage):
     depends_on("udunits", type="run")
 
     depends_on("fms", type="run")      # for FV3
+    
+    depends_on("py-pycodestyle", type="run")
+    depends_on("jasper", type="run")
+
 
     # There is no need for install() since there is no code.
 
